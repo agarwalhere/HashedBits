@@ -1,0 +1,57 @@
+.movie-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.movie-card {
+    text-decoration: none;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.movie-image {
+    width: 100%;
+    height: auto;
+}
+
+.movie-title {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.movie-details {
+    text-align: center;
+    padding: 20px;
+}
+
+.book-button, .submit-button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.form-input {
+    margin: 10px 0;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+}
+
+.confirmation-screen {
+    text-align: center;
+    padding: 20px;
+}
