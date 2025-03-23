@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header"
+                "menu menu"
+                "sidebar main"
+                "footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto auto 1fr auto;
+            min-height: 100vh;
+        }
+        header {
+            grid-area: header;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #333;
+            color: white;
+            padding: 15px;
+        }
+        .menu {
+            grid-area: menu;
+            background: #444;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .menu a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .sidebar {
+            grid-area: sidebar;
+            background: #ddd;
+            padding: 20px;
+        }
+        .main {
+            grid-area: main;
+            padding: 20px;
+            display: flex;
+            gap: 20px;
+        }
+        .box {
+            flex: 1;
+            background: #f4f4f4;
+            padding: 15px;
+            text-align: center;
+        }
+        .box img {
+            max-width: 100%;
+            height: auto;
+        }
+        footer {
+            grid-area: footer;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">LOGO</div>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/shourey" style="color: white;">LinkedIn</a> |
+                <a href="https://github.com/agarwalhere" style="color: white;">Github</a> |
+            </div>
+        </header>
+        <nav class="menu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+        <aside class="sidebar">
+            <h3>Custom Data</h3>
+            <p>Some custom sidebar content goes here.</p>
+        </aside>
+        <main class="main">
+            <div class="box">
+                <h3>Title 1</h3>
+                <img src="https://via.placeholder.com/150" alt="Image 1">
+                <p>Here we can put any description for Box 1</p>
+            </div>
+            <div class="box">
+                <h3>Title 2</h3>
+                <img src="https://via.placeholder.com/150" alt="Image 2">
+                <p>Here we can put any description for Box 2</p>
+            </div>
+            <div class="box">
+                <h3>Title 3</h3>
+                <img src="https://via.placeholder.com/150" alt="Image 3">
+                <p>Here we can put any description for Box 3</p>
+            </div>
+        </main>
+        <footer>
+            <p>Sample footer text.</p>
+        </footer>
+    </div>
+</body>
+</html>
